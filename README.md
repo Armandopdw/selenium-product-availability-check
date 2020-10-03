@@ -385,16 +385,16 @@ Project Link: [https://github.com/Armandopdw/selenium-product-availability-check
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Armandopdw/repo.svg?style=flat-square
-[contributors-url]: https://github.com/Armandopdw/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Armandopdw/repo.svg?style=flat-square
-[forks-url]: https://github.com/Armandopdw/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/Armandopdw/repo.svg?style=flat-square
-[stars-url]: https://github.com/Armandopdw/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Armandopdw/repo.svg?style=flat-square
-[issues-url]: https://github.com/Armandopdw/repo/issues
-[license-shield]: https://img.shields.io/github/license/Armandopdw/repo.svg?style=flat-square
-[license-url]: https://github.com/Armandopdw/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Armandopdw/selenium-product-availability-check.svg?style=flat-square
+[contributors-url]: https://github.com/Armandopdw/selenium-product-availability-check/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Armandopdw/selenium-product-availability-check.svg?style=flat-square
+[forks-url]: https://github.com/Armandopdw/selenium-product-availability-check/network/members
+[stars-shield]: https://img.shields.io/github/stars/Armandopdw/selenium-product-availability-check.svg?style=flat-square
+[stars-url]: https://github.com/Armandopdw/selenium-product-availability-check/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Armandopdw/selenium-product-availability-check.svg?style=flat-square
+[issues-url]: https://github.com/Armandopdw/selenium-product-availability-check/issues
+[license-shield]: https://img.shields.io/github/license/Armandopdw/selenium-product-availability-check.svg?style=flat-square
+[license-url]: https://github.com/Armandopdw/selenium-product-availability-check/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/Armandopdw
 [product-screenshot]: images/screenshot.png
