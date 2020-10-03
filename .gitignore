@@ -1,2 +1,7 @@
-.idea/* 
-config.py # prevents accidental push of sensitive info (e.g. passwords)
+# Pycharm
+.idea/ 
+
+# Application specific
+# Prevents accidental push of sensitive info (e.g. passwords)
+config.py 
+pw/* 
