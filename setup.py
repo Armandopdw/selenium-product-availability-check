@@ -22,6 +22,7 @@ setup(name='El Corte Product Scrape',
           "selenium>=3.141.0",
           "six>=1.15.0",
           "soupsieve>=2.0.1",
-          "urllib3>=1.25.10"
+          "urllib3>=1.25.10",
+          "loguru>=0.5.3"
       ]
       )
