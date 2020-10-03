@@ -5,12 +5,14 @@ import ssl
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+from loguru import logger as lg
+
 
 class Mail():
     SMTP_CONF_MAPPING = {"gmail": {"server": "smtp.gmail.com",
-                                   "port": 587},
+                                   "port": 465},
                          "gmx": {"server": "mail.gmx.com",
-                                 "port": 465}}
+                                 "port": 587}}
 
     PASS_PATH = os.getcwd() + '/pw/pw.txt'
 
@@ -56,8 +58,17 @@ class Mail():
         message.attach(part1)
         message.attach(part2)
 
-        with smtplib.SMTP_SSL(self.smtp_server, self.smtp_port, context=self.context) as server:
-            server.login(self.sender_email, self.password)
-            server.sendmail(
-                self.sender_email, self.receiver_email, message.as_string()
-            )
+        # Get server
+        server = smtplib.SMTP(self.smtp_server, self.smtp_port)
+
+        # Port 587 requires ttls
+        if self.smtp_port == 587:
+            starttls = server.starttls()
+        login = server.login(self.sender_email, self.password)
+        lg.debug("Logged into mail: %s" % login[1])
+
+        server.sendmail(self.sender_email, self.receiver_email, message.as_string())
+        lg.debug("Sent mail")
+
+        server.quit()
+        del server
