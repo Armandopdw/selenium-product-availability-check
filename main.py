@@ -59,11 +59,11 @@ click_element(".js-modal-footer-accept")
 # Obtain inner text
 inner_text = get_inner_text(".js-buy-button")
 
-# Initiate mail server
-ml = Mail(Config.SENDER_EMAIL, Config.RECEIVER_EMAIL)
-ml.create_ssl_connection()
-ml.load_password()
-
 # Agotado = Sold Out. Will send email if product is back
 if inner_text != "AGOTADO":
+    # Initiate mail server
+    ml = Mail(Config.SENDER_EMAIL, Config.RECEIVER_EMAIL)
+    ml.create_ssl_connection()
+    ml.load_password()
+    # Send email
     ml.send_email(f"{Config.PRODUCT} is Back!", Config.PLAIN_TEXT, Config.HTML)
