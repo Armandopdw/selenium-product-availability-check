@@ -1,11 +1,11 @@
 # Pycharm
-.idea/
+.idea
 __pycache__* 
 
 # Application specific
 # Prevents accidental push of sensitive info (e.g. passwords)
 config.py 
-pw/* 
+pw
 
 # Prevents the chromedriver to be included in GIT
 sel/chromedriver

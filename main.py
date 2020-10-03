@@ -2,8 +2,13 @@
 
 from loguru import logger as lg
 
-from config import Config
-from mail.mail import Mail
+# Try to import config file
+try:
+    from config import Config
+except ModuleNotFoundError as e:
+    raise RuntimeError("config.py file has not been set yet, adjust and rename the example_config.py")from mail.mail
+    import Mail
+
 from sel.build_selenium import CustomSelenium
 
 if __name__ == '__main__':
