@@ -1,2 +1,2 @@
-.idea 
+.idea/* 
 config.py # prevents accidental push of sensitive info (e.g. passwords)
