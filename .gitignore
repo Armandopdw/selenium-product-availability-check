@@ -1,0 +1,11 @@
+# Visual Studio
+__pycache__* 
+
+# Application specific
+# Prevents accidental push of sensitive info (e.g. passwords)
+config.py 
+pw
+
+# Prevents the chromedriver to be included in GIT
+sel/chromedriver
+sel/downloads
