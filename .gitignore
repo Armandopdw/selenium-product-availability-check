@@ -1,5 +1,6 @@
 # Visual Studio
 __pycache__* 
+.DS_Store.*
 
 # Application specific
 # Prevents accidental push of sensitive info (e.g. passwords)
