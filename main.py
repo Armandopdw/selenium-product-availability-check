@@ -6,8 +6,9 @@ try:
     from config import Config
 except ModuleNotFoundError as e:
     raise RuntimeError(
-        "config.py file has not been set yet, adjust and rename the example_config.py")from mail.mail
-    import Mail
+        "config.py file has not been set yet, adjust and rename the example_config.py")
+
+from mail.mail import Mail
 
 from sel.build_selenium import CustomSelenium
 
@@ -15,7 +16,7 @@ if __name__ == '__main__':
     lg.info("Building Selenium..")
     # Build selenium with Custom Selenium Class
     cust_sel = CustomSelenium(Config.OS_NAME, Config.CHROME_VERSION,
-                              headless=Config.HEADLESS, rebuild=False)
+                              headless=Config.HEADLESS)
 
     # Initiate driver
     driver = cust_sel.driver

@@ -51,7 +51,7 @@ class Custom_Soup:
         if not os.path.isdir(cwd + "/downloads"):
             os.mkdir(cwd + "/downloads")
         if self.response != "":
-            with open(os.open(cwd + "/downloads/" + self.name + "." + file_extension, os.O_CREAT | os.O_WRONLY, 0o777), "wb") as file:
+            with open(os.open(cwd + "/downloads/" + self.name + "." + file_extension, os.O_CREAT | os.O_WRONLY, 0o755), "wb") as file:
                 file.write(self.response.content)
         else:
             print(

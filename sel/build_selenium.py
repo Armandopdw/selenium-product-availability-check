@@ -42,7 +42,8 @@ class CustomSelenium:
         # Rebuild if forced or if no chromedriver exists yet
         nr_chromedriver_files = glob.glob(
             os.path.join(self.download_path, "*"))
-        if rebuild or nr_chromedriver_files == 0:
+        lg.debug(nr_chromedriver_files)
+        if rebuild or len(nr_chromedriver_files) == 0:
             lg.debug("Rebuilding..")
             self.get_latest_release()
             self.download_chromedriver()
@@ -69,6 +70,8 @@ class CustomSelenium:
         if not os.path.isdir(self.chromedriver_path):
             os.mkdir(self.chromedriver_path)
         file.extractall(path=self.chromedriver_path)
+        os.chmod(self.chromedriver_path+"/chromedriver", 0o755)
+        #file.extract(member="chromedriver", path=self.chromedriver_path)
 
     def init_driver(self):
         """ Sets Selenium options and returns driver
