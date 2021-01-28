@@ -331,16 +331,20 @@ const _validatePayload = (payload) => {
 };
 ```
 
-#### Obtain Base64 encoding
-Google Pub Sup requires base64 encoded data. Go to a [base64-encoder](https://www.base64encode.net/) and encode the following text
+#### Testing Pub Sub --> Cloud Function
+Pub Sub requires base64 encoded data when testing messages. Go to a [base64-encoder](https://www.base64encode.net/) and encode the following text
 ``` json
 {"zone":"{ZONE}", "id":"{VIRTUAL MACHINE INSTANCE ID}"}
 ```
-
-#### Add message to Pub Sub Topic
-Using the base64 encoded string add the following message to your Pub Sub Topic
+Using the base64 encoded string add the following message to your message for the Pub Sub topic
 ``` json
 {"data":"{BASE64ENCODED"}
+```
+
+#### Add message to Pub Sub Topic
+For the actual Cloud Scheduler you can use the following message:
+``` json
+{"zone":"{ZONE}", "id":"{VIRTUAL MACHINE INSTANCE ID}"}
 ```
 
 
